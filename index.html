@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsFlow AI</title>
+    <style>
+        /* DARK MODE THEME */
+        body {
+            background-color: #000000; /* Pure Black */
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto; /* Centers the content */
+        }
+
+        /* HEADER DESIGN */
+        header {
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            color: #888;
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+
+        /* NEWS CARD DESIGN */
+        .news-card {
+            background-color: #111; /* Slightly lighter than background */
+            border: 1px solid #333;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .category {
+            color: #4CAF50; /* Green for Finance/Tech */
+            font-weight: bold;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .news-title {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            color: #fff;
+        }
+
+        .summary {
+            color: #ccc; /* Light grey for easy reading */
+            font-size: 1.1rem;
+        }
+
+        .source-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #3498db; /* Blue link */
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .source-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            color: #555;
+            margin-top: 50px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>NewsFlow AI</h1>
+            <div class="tagline" id="date-display">Daily Impact Briefing</div>
+        </header>
+
+        <div class="news-card">
+            <div class="category">FINANCE</div>
+            <h2 class="news-title">Global Markets React to Interest Rate Shift</h2>
+            <p class="summary">
+                Central banks signaled a change today. 
+                <strong>For Citizens:</strong> Mortgage rates may stabilize, making home loans predictable. 
+                <strong>For Investors:</strong> Tech stocks are showing new volatility. 
+                <strong>For Students:</strong> Loan interest rates for next semester may remain unchanged.
+            </p>
+            <a href="#" class="source-link">Read Source (Bloomberg)</a>
+        </div>
+
+        <div class="news-card">
+            <div class="category">TECHNOLOGY</div>
+            <h2 class="news-title">New AI Regulations Proposed</h2>
+            <p class="summary">
+                Governments are discussing new AI safety rules. 
+                <strong>Impact:</strong> Tech companies face stricter checks. 
+                Citizens can expect more transparency in how their data is used. 
+                Students in law and tech policy will see new career opportunities opening up.
+            </p>
+            <a href="#" class="source-link">Read Source (TechCrunch)</a>
+        </div>
+
+        <footer>
+            <p>Powered by NewsFlow AI • Updated Daily</p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple script to show today's date
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('date-display').textContent = new Date().toLocaleDateString('en-US', options);
+    </script>
+
+</body>
+</html>
